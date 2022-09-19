@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Trybe Timer</title>
+  </head>
+  <body class="bg-green-700">
+    <main class="w-full flex flex-col gap-4 justify-center items-center">
+      <section class="flex items-center gap-2">
+        <h1 class="text-white p-2 items-center text-3xl flex gap-2">
+          trybeTimer
+          <img class="w-8 h-8" src="./assets/logo-trybe-s:bg.png" alt="trybe-logo">
+        </h1>
+        <label for="time" class="text-white text-lg">Intervalo em minutos</label>
+        <input id="time" class="text-center rounded-lg w-10" min="0" type="number">
+      </section>
+
+      <section class=" flex flex-col items-center gap-6">
+        <section class="flex text-white gap-1 text-5xl">
+          <p id="timer-render">00:00</p>
+        </section>
+        <section class="flex gap-2">
+          <button type="button" id="start" class="rounded bg-white text-green-700 p-1">Start</button>
+          <button type="button" id="clear" class="rounded bg-white text-green-700 p-1">Clear</button>
+          <button type="button" id="stop" class="rounded bg-white text-green-700 p-1">Stop/Start</button>
+        </section>
+      </section>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
